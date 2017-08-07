@@ -1,0 +1,29 @@
+# GET /authors
+GET http://localhost:3000/authors
+
+###
+
+# POST /authors
+POST http://localhost:3000/authors 
+Content-Type: application/json
+
+{
+  "firstname": "Paolo",
+  "lastname": "Coelho"
+}
+
+###
+
+# PUT /authors/:id
+PUT http://localhost:3000/authors/1
+Content-Type: application/json
+
+{
+  "firstname": "George",
+  "lastname": "Orwell"
+}
+
+###
+
+# DELETE /authors/:id
+DELETE http://localhost:3000/authors/1
