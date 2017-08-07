@@ -1,9 +1,6 @@
-# GET /authors
 GET http://localhost:3000/authors
 
 ###
-
-# POST /authors
 POST http://localhost:3000/authors 
 Content-Type: application/json
 
@@ -13,8 +10,6 @@ Content-Type: application/json
 }
 
 ###
-
-# PUT /authors/:id
 PUT http://localhost:3000/authors/1
 Content-Type: application/json
 
@@ -24,6 +19,4 @@ Content-Type: application/json
 }
 
 ###
-
-# DELETE /authors/:id
 DELETE http://localhost:3000/authors/1

@@ -14,10 +14,12 @@
 | PUT /authors/:id/books    |                    Update a book |
 | DELETE /authors/:id/books |                    Delete a book |
 
-## Running RSpec Tests
-
-`$ bundle exec rspec`
-
 ## Starting the application
 
-`$ rails s`
+Reset the database: `rails db:reset`
+
+Start the server: `rails s`
+
+## Running RSpec Tests
+
+`bundle exec rspec`
