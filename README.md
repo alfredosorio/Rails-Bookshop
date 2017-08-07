@@ -17,3 +17,7 @@
 ## Running RSpec Tests
 
 `$ bundle exec rspec`
+
+## Starting the application
+
+`$ rails s`
