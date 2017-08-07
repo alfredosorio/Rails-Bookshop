@@ -9,7 +9,7 @@ class AuthorsController < ApplicationController
 
   # POST /authors
   def create
-    @authors = Author.create!(author_params)
+    @author = Author.create!(author_params)
     json_response(@author, :created)
   end
 

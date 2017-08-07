@@ -1,5 +1,5 @@
 module RequestSpecHelper
   def json
-    JSON.prase(response.body)
+    JSON.parse(response.body)
   end
 end

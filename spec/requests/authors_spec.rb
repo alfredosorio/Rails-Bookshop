@@ -52,14 +52,14 @@ RSpec.describe 'Authors API', type: :request do
   # Test suite for POST /authors
   describe 'POST /authors' do
     # Valid payload - ensure both firstname and lastname are returned.
-    let(:valid_attributes) { { firstname: 'Alfred', lastname: 'Osorio' } }
+    let(:valid_attributes) { { firstname: 'Harper', lastname: 'Lee' } }
 
     context 'when the request is valid' do
       before { post '/authors', params: valid_attributes }
 
       it 'creates an author' do
-        expect(json['firstname']).to eq('Alfred')
-        expect(json['lastname']).to eq('Osorio')
+        expect(json['firstname']).to eq('Harper')
+        expect(json['lastname']).to eq('Lee')
       end
 
       it 'returns status code 201' do
@@ -76,17 +76,17 @@ RSpec.describe 'Authors API', type: :request do
 
       it 'returns a validation failure message' do
         expect(response.body)
-          .to match(/Validation failed: 'Lastname does not exist'/) # Make sure this is correct
+          .to match(/Validation failed: Lastname can't be blank/) # Make sure this is correct
         end
       end
     end
 
     # Test suite for PUT /authors/:id
     describe 'PUT /authors/:id' do
-      let(:valid_attributes) { { firstname: 'Alfred' } }
+      let(:valid_attributes) { { firstname: 'Alfred', lastname: 'Osorio' } }
 
       context 'when the record exists' do
-        before { put "/authors#{author_id}", params: valid_attributes}
+        before { put "/authors/#{author_id}", params: valid_attributes}
 
         it 'updates the record' do
           expect(response.body).to be_empty
