@@ -1,24 +1,16 @@
-# README
+# API Endpoints
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+| Endpoint                  |                    Functionality |
+|---------------------------|---------------------------------:|
+| POST/signup               |                           Signup |
+| POST /auth/login          |                            Login |
+| GET /auth/logout          |                           Logout |
+| GET /authors              |                 List all authors |
+| POST /authors             |              Create a new author |
+| GET /authors/:id          |             Get an single author |
+| PUT /authors/:id          |                 Update an author |
+| DELETE /authors/:id       | Delete an author and their books |
+| GET /authors/:id/books    |                       Get a book |
+| PUT /authors/:id/books    |                    Update a book |
+| DELETE /authors/:id/books |                    Delete a book |
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
